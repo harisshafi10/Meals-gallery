@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 
 const App = () => {
   const [items, setItems] = useState([]);
@@ -17,11 +17,11 @@ const App = () => {
   const itemsList =  items.map(({strMeal , strMealThumb, idMeal})=>{
     return (
       
-      <div key={idMeal} className="bg-white w-fit h-fit text-black rounded-3xl mt-5 flex flex-col justify-center items-center">
+      <div key={idMeal} className="bg-white w-fit h-fit text-black rounded-3xl mt-5 flex flex-col justify-center items-center hover:scale-105 cursor-pointer duration-500 shadow-lg hover:shadow-orange-50">
         <section className="" >
         <img className="rounded-t-3xl" src={strMealThumb} alt={strMeal} height={400} width={300}/>
       </section>
-      <section className="text-wrap text-center text-xs">
+      <section className="text-wrap text-center text-xs ">
         <p className="font-bold leading-10">{strMeal}</p>
         <p className="leading-5">#{idMeal}</p>
       </section>
